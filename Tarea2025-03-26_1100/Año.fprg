@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="A&#241;o"/>
+        <attribute name="authors" value="win10"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-03-22 06:59:05 p. m."/>
+        <attribute name="created" value="d2luMTA7REVTS1RPUC0wT1NIREpROzIwMjUtMDMtMjI7MDY6MzY6NTUgcC4gbS47Mjk5Mg=="/>
+        <attribute name="edited" value="d2luMTA7REVTS1RPUC0wT1NIREpROzIwMjUtMDMtMjI7MDY6NTk6MDUgcC4gbS47MTszMTAw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Al ingresar un a&#241;o &quot;X&quot;, indique si es bisiesto o no. Los a&#241;os bisiestos son aquellos que son multiplos de 4, pero, los multiplos de 100 no lo son, aunque, los multiplos de 400 si lo son."/>
+            <declare name="A&#241;o" type="Integer" array="False" size=""/>
+            <output expression="&quot;Ingrese el a&#241;o:&quot;" newline="True"/>
+            <input variable="A&#241;o"/>
+            <if expression="A&#241;o%4==0">
+                <then>
+                    <if expression="A&#241;o%100==0">
+                        <then>
+                            <if expression="A&#241;o%400==0">
+                                <then>
+                                    <output expression="&quot;El a&#241;o es bisiesto&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <output expression="&quot;El a&#241;o no es Bisiesto&quot;" newline="True"/>
+                                </else>
+                            </if>
+                        </then>
+                        <else>
+                            <output expression="&quot;El a&#241;o es bisiesto&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <output expression="&quot;El a&#241;o no es Bisiesto&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

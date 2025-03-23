@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="donas"/>
+        <attribute name="authors" value="win10"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-03-22 06:36:50 p. m."/>
+        <attribute name="created" value="d2luMTA7REVTS1RPUC0wT1NIREpROzIwMjUtMDMtMjI7MDY6MTY6MjggcC4gbS47Mjk5MA=="/>
+        <attribute name="edited" value="d2luMTA7REVTS1RPUC0wT1NIREpROzIwMjUtMDMtMjI7MDY6MzY6NTAgcC4gbS47MTszMDk1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="En una Fabrica de donas cada pz cuesta $10, pero, si se compran 30 o mas pzs, se hace un descuento de $1 por dona, aunque si se compran de 50 o mas pzs se descuentan $2 por dona"/>
+            <declare name="Dona, pzs, total, desc, totaldesc" type="Integer" array="False" size=""/>
+            <assign variable="Dona" expression="10"/>
+            <output expression="&quot;&#191;Cuantas donas ha comprado?&quot;" newline="True"/>
+            <input variable="pzs"/>
+            <assign variable="total" expression="pzs*10"/>
+            <if expression="pzs&gt;=30">
+                <then>
+                    <if expression="pzs&gt;=50">
+                        <then>
+                            <assign variable="desc" expression="2*pzs"/>
+                        </then>
+                        <else>
+                            <assign variable="desc" expression="1*pzs"/>
+                        </else>
+                    </if>
+                </then>
+                <else/>
+            </if>
+            <assign variable="totaldesc" expression="total-desc"/>
+            <output expression="&quot;El total es:&quot;&amp;totaldesc&amp;&quot;&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
