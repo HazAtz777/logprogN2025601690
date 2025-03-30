@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Sala-juegos"/>
+        <attribute name="authors" value="win10"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-03-30 05:49:38 p. m."/>
+        <attribute name="created" value="d2luMTA7REVTS1RPUC0wT1NIREpROzIwMjUtMDMtMzA7MDU6MzU6MTAgcC4gbS47Mjk4MA=="/>
+        <attribute name="edited" value="d2luMTA7REVTS1RPUC0wT1NIREpROzIwMjUtMDMtMzA7MDU6NDk6MzggcC4gbS47MTszMTAz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Escribir un programa para una empresa que tiene salas de juegos para todas las cadenas y quiere calcular de forma autom&#225;tica el precio que debe cobrar a sus clientes por entrar. El programa debe preguntar al usuario la edad del cliente y mostrar el precio de la entrada. Si el cliente es menor de 4 a&#241;os puede entrar gratis, si tiene entre 4 y 18 a&#241;os debe pagar $200 y si es mayor de 18 a&#241;os, $500."/>
+            <declare name="edad" type="Integer" array="False" size=""/>
+            <output expression="&quot;Ingrese la edad&quot;" newline="True"/>
+            <input variable="edad"/>
+            <if expression="edad&lt;4 AND edad &gt;= 0">
+                <then>
+                    <output expression="&quot;Entrada GRATIS&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="edad &gt;=4 AND edad &lt;=18">
+                        <then>
+                            <output expression="&quot;Entrada $200&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="edad &gt; 18 AND edad &lt; 100">
+                                <then>
+                                    <output expression="&quot;Entrada $500&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <output expression="&quot;Ilogico&quot;" newline="True"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
