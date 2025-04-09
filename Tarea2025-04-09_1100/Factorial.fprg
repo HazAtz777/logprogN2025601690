@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Factorial"/>
+        <attribute name="authors" value="win10"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-04-07 10:34:58 p. m."/>
+        <attribute name="created" value="d2luMTA7REVTS1RPUC0wT1NIREpROzIwMjUtMDQtMDc7MDk6MzQ6MTAgcC4gbS47Mjk4OA=="/>
+        <attribute name="edited" value="d2luMTA7REVTS1RPUC0wT1NIREpROzIwMjUtMDQtMDc7MTA6MzQ6NTggcC4gbS47MTszMTAw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i, f, num" type="Integer" array="False" size=""/>
+            <input variable="num"/>
+            <assign variable="i" expression="1"/>
+            <assign variable="f" expression="1"/>
+            <while expression="i&lt;=num">
+                <assign variable="f" expression="i*f"/>
+                <assign variable="i" expression="i+1"/>
+            </while>
+            <output expression="num" newline="True"/>
+            <output expression="f" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
